@@ -656,6 +656,70 @@ ul {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* ====Mailing==== */
+.mailing-container {
+  margin-left: 93px;
+}
+
+.mailing-text {
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.mailing-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.mailing-label {
+  display: inline-block;
+}
+
+.mailing-input {
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  background-color: #2f303a;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 1.25;
+}
+
+.subscribe-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 200px;
+  height: 50px;
+  color: #ffffff;
+  background-color: #2196f3;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+
+.send-icon {
+  margin-left: 10px;
+  fill: currentColor;
+}
+
+/* ===Модельное окно=== */
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -681,9 +745,12 @@ ul {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) scale(1);
-  min-height: 528px;
-  min-width: 581px;
+  transform: translate(-50%, -50%) scale(1.1);
+  overflow: auto;
+  padding: 40px;
+  max-width: 528px;
+  width: 100%;
+  max-height: 100vh;
   background-color: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -711,4 +778,142 @@ ul {
 .modal-close:focus {
   background: #ffffff;
   border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.modal-text {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 12px;
+}
+
+.modal-label:not(:first-child) {
+  margin-top: 10px;
+}
+
+.modal-label {
+  display: flex;
+  flex-direction: column;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  color: #757575;
+}
+
+.input-wraper {
+  position: relative;
+}
+
+.modal-input:focus {
+  border: 1px solid #2196f3;
+  outline: none;
+}
+
+.modal-input:focus ~ .input-icon {
+  border-radius: 4px;
+  fill: #2196f3;
+}
+
+.modal-input {
+  margin-top: 4px;
+  padding: 11px 42px;
+  width: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.input-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input.feedback {
+  padding: 12px 16px;
+  resize: none;
+}
+
+/* ==Checkbox=== */
+
+.checkbox {
+  margin-top: 20px;
+}
+
+.checkbox-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.checkbox-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.checkbox-text {
+  margin-left: 7px;
+  color: #757575;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.checkbox-link {
+  color: #2196f3;
+  text-decoration: underline;
+}
+
+.check-icon {
+  opacity: 0;
+}
+
+.checkbox-input:checked ~ .check-icon {
+  opacity: 1;
+}
+
+.checkbox-input:checked ~ .uncheck-icon {
+  opacity: 0;
+}
+
+.check-icon,
+.uncheck-icon {
+  position: absolute;
+  top: 50%;
+  left: 0px;
+  transform: translateY(-50%);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-btn {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 55px;
+  color: #ffffff;
+  background-color: #2196f3;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
